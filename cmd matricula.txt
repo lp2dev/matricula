@@ -1,0 +1,9 @@
+D:\>pip install virtualenv #instala el pkg virtualenv
+D:\>md lp2dev   # crea carpeta
+D:\>cd lp2dev
+D:\lp2dev>virtualenv dj18m   # crea un entorno virtual
+D:\lp2dev>dj18m\Scripts\activate  # activa un entorno virtual
+(dj18m) D:\lp2dev>pip install django # instala dj
+(dj18m) D:\lp2dev>django-admin startproject matricula  # crea un proyecto dj
+(dj18m) D:\lp2dev>cd matricula
+(dj18m) D:\lp2dev\matricula>manage.py runserver # inicia servidor web de dj
