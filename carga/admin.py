@@ -2,4 +2,10 @@ from django.contrib import admin
 from carga.models import Curso
 # Register your models here.
 
-admin.site.register(Curso)
+
+class CursoAdmin(admin.ModelAdmin):
+    list_per_page = 2
+    list_display = ("codigo", "nombre")
+    search_fields = ("nombre", "codigo",)
+
+admin.site.register(Curso, CursoAdmin)
