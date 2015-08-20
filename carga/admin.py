@@ -5,7 +5,7 @@ from carga.models import Curso
 
 class CursoAdmin(admin.ModelAdmin):
     list_per_page = 2
-    list_display = ("codigo", "nombre")
+    list_display = ("codigo", "nombre", "user")
     search_fields = ("nombre", "codigo",)
 
 admin.site.register(Curso, CursoAdmin)
