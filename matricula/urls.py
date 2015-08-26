@@ -9,4 +9,9 @@ urlpatterns = patterns(
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+
+    url(r'^api-auth/',
+        include('rest_framework.urls', namespace='rest_framework')),
+
+    url(r'^carga/', include('carga.urls')),
 )
