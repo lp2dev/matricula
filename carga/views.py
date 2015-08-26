@@ -2,9 +2,19 @@ from django.shortcuts import render
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from .models import Ciclo
 
-# Create your views here.
-# Serializers define the API representation.
+
+class CicloSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Ciclo
+        #fields = ('url', 'abrev', 'desc')
+
+
+class CicloViewSet(viewsets.ModelViewSet):  # API REST
+    queryset = Ciclo.objects.filter()
+    serializer_class = CicloSerializer
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

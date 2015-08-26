@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
 
     'rest_framework',
+    'oauth2_provider',
 
     'carga',
 )
@@ -97,7 +98,7 @@ STATIC_URL = '/static/'
 
 
 # add
-REST_FRAMEWORK = {
+REST_FRAMEWORKx = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
