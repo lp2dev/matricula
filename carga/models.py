@@ -17,7 +17,7 @@ class MiUser(AbstractUser):
 class Ciclo(models.Model):
 
     abrev = models.CharField(max_length=10, null=True, blank=True)
-    descr = models.CharField(max_length=60)
+    desc = models.TextField(max_length=60)
 
     class Meta:
         verbose_name = "Ciclo"
