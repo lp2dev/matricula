@@ -14,11 +14,25 @@ class MiUser(AbstractUser):
 '''
 
 
+class Ciclo(models.Model):
+
+    abrev = models.CharField(max_length=10, null=True, blank=True)
+    descr = models.CharField(max_length=60)
+
+    class Meta:
+        verbose_name = "Ciclo"
+        verbose_name_plural = "Ciclos"
+
+    def __str__(self):
+        return self.abrev
+
+
 class Curso(models.Model):
 
     codigo = models.CharField(max_length=10, null=True, blank=True)
     nombre = models.CharField(max_length=60)
     user = models.ForeignKey(User, null=True, blank=True)
+    ciclo = models.ForeignKey(Ciclo, null=True, blank=True)
 
     class Meta:
         verbose_name = "Curso"
