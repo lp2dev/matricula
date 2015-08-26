@@ -68,7 +68,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '1521',
     },
-    'sqlite3': {
+    'defaultx': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
