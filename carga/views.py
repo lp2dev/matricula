@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.conf.urls import url, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
+from rest_framework import permissions
 from .models import Ciclo
 
 
@@ -15,6 +16,7 @@ class CicloSerializer(serializers.HyperlinkedModelSerializer):
 class CicloViewSet(viewsets.ModelViewSet):  # API REST
     queryset = Ciclo.objects.filter()
     serializer_class = CicloSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
