@@ -40,6 +40,7 @@ INSTALLED_APPS = (
 
     'rest_framework',
     'oauth2_provider',
+    'corsheaders',
 
     'carga',
 )
@@ -52,6 +53,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
 )
 
 ROOT_URLCONF = 'matricula.urls'
@@ -103,3 +106,5 @@ REST_FRAMEWORK = {
         'oauth2_provider.ext.rest_framework.OAuth2Authentication',
     )
 }
+
+CORS_ORIGIN_ALLOW_ALL = True

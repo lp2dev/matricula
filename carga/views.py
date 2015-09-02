@@ -6,7 +6,7 @@ from rest_framework import permissions
 from .models import Ciclo, NaturalPerson
 
 
-class NaturalPersonSerializer(serializers.HyperlinkedModelSerializer):
+class NaturalPersonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NaturalPerson
@@ -16,7 +16,7 @@ class NaturalPersonSerializer(serializers.HyperlinkedModelSerializer):
 class NaturalPersonViewSet(viewsets.ModelViewSet):  # API REST
     queryset = NaturalPerson.objects.filter()
     serializer_class = NaturalPersonSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 class CicloSerializer(serializers.HyperlinkedModelSerializer):
