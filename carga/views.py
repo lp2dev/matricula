@@ -19,7 +19,7 @@ class NaturalPersonViewSet(viewsets.ModelViewSet):  # API REST
     # permission_classes = [permissions.IsAuthenticated]
 
 
-class CicloSerializer(serializers.HyperlinkedModelSerializer):
+class CicloSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ciclo
@@ -29,7 +29,7 @@ class CicloSerializer(serializers.HyperlinkedModelSerializer):
 class CicloViewSet(viewsets.ModelViewSet):  # API REST
     queryset = Ciclo.objects.filter()
     serializer_class = CicloSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
