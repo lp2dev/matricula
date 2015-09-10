@@ -74,6 +74,14 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '1521',
     },
+    'oracle': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'xe',
+        'USER': 'upeudb',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '1521',
+    },
     'defaultx': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),

@@ -46,7 +46,7 @@ class Curso(models.Model):
     codigo = models.CharField(max_length=10, null=True, blank=True)
     nombre = models.CharField(max_length=60)
     user = models.ForeignKey(User, null=True, blank=True)
-    ciclo = models.ForeignKey(Ciclo, null=True, blank=True)
+    ciclo = models.ForeignKey(Ciclo)
 
     class Meta:
         verbose_name = "Curso"
