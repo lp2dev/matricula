@@ -10,7 +10,7 @@ class NaturalPersonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NaturalPerson
-        #fields = ('url', 'abrev', 'desc')
+        #fields = ('url', 'abrev', 'descr')
 
 
 class NaturalPersonViewSet(viewsets.ModelViewSet):  # API REST
@@ -23,7 +23,7 @@ class CicloSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ciclo
-        #fields = ('url', 'abrev', 'desc')
+        #fields = ('url', 'abrev', 'descr')
 
 
 class CicloViewSet(viewsets.ModelViewSet):  # API REST
