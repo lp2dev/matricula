@@ -39,9 +39,4 @@ class CicloList(APIView):
         cursor.execute('SELECT id, abrev, descr FROM CARGA_CICLO')
         #rs = cursor.fetchall()
         usernames = dictfetchall(cursor)
-        # result = dict(zip([col[0] for col in cursor.description], row)) for
-        # row in cursor.fetchall()
-
-        # return Response(result)
-        # usernames = "hola"
         return Response(usernames, content_type='application/json')
